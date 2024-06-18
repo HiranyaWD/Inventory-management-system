@@ -1,0 +1,25 @@
+create database MOOI;
+use MOOI;
+
+--Login
+Create table Login(UserName varchar(50),Password varchar(50));
+insert into Login values
+('MOOI','M123');
+
+--Register
+create table Registered_User(id varchar(50),username varchar(50),gmail varchar(70),
+profilepic VARBINARY(MAX),password varchar(50));
+
+--Materials
+create table materials(item_Heading varchar(100),item_name varchar(100));
+
+--Materials IN
+create table INN(users varchar(50),date date, item varchar(100),item_name varchar(100),
+unit varchar(50),quantity int);
+
+--Materials Out
+create table Outt (users varchar(50),date date, item varchar(100),item_name varchar(100),
+available_quantity int,unit varchar(50),quantity_out int);
+
+--Final Stock
+create table Final_Stock(item varchar(100),item_name varchar(100),unit varchar(50),quantity int);
